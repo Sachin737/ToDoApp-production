@@ -9,6 +9,9 @@ import tasksRoute from "./routes/tasksRoute.js";
 import userRoute from "./routes/userRoute.js";
 import path from "path";
 
+import { dirname } from 'path';
+const __dirname = dirname(__filename);
+
 dotenv.config();
 
 // App
