@@ -1,0 +1,385 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --bg: #ffffff;
+  --bgshade: rgb(243, 243, 243);
+  --primary: #1aac83;
+  --primaryshade: #179773;
+  --logo: #333;
+  --fontlight: #555;
+  --shadow: rgba(0, 0, 0, 0.05);
+  --calender: light;
+  --invert: #000000;
+}
+
+[data-theme='dark'] {
+  --bg: #212121;
+  --bgshade: rgb(0, 0, 0);
+  --primary: #1aac83;
+  --primaryshade: #179773;
+  --logo: rgb(255, 255, 255);
+  --fontlight: rgb(210, 210, 210);
+  --shadow: rgba(255, 255, 255, 0.105);
+  --calender: dark;
+  --invert: #F5F6FA;
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.App {
+  min-height: 100vh;
+  background: var(--bgshade);
+  font-family: "Poppins";
+}
+
+header {
+  overflow-y: hidden;
+  width: 100vw;
+  height: 14vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+header .right .dropdown {
+  border-radius: 16px;
+  background: var(--primary);
+  padding: 4px;
+}
+
+header .right .links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+
+header .username {
+  color: var(--logo);
+  border-right: 1px solid var(--logo);
+  padding: 1px 12px;
+}
+
+header .container {
+  margin: 0;
+  padding: 10px 20px;
+}
+
+header .theme-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+header .theme-toggle h4 {
+  color: var(--logo);
+}
+
+header a {
+  color: var(--logo);
+  text-decoration: none;
+}
+
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+
+.task-details {
+  position: relative;
+  background: var(--bg);
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 5px 5px 5px var(--shadow);
+}
+
+
+.task-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.task-details .deadline {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--fontlight);
+}
+
+.task-details .description {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--fontlight);
+}
+
+.task-details .description-box {
+  color: var(--fontlight);
+  background-color: var(--bgshade);
+  padding: 10px 8px;
+  min-height: 20px;
+  max-height: 200px;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  margin-top: 4px;
+}
+
+.task-details .createdAt {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  margin-bottom: -20px;
+  color: var(--fontlight);
+}
+
+
+.task-details button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--bg);
+}
+
+/* new workout form */
+label,
+input {
+  display: block;
+}
+
+label {
+  color: var(--fontlight);
+}
+
+input {
+  background: var(--bgshade);
+  color: var(--fontlight);
+  color-scheme: var(--calender);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid var(--fontlight);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  background: var(--primary);
+  border: 0;
+  color: var(--bg);
+  padding: 10px 12px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--primaryshade);
+}
+
+form h3 {
+  color: var(--fontlight);
+}
+
+
+/* ================================================ */
+/* Login SIgnup styling */
+form.register,
+form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--bg);
+  border-radius: 4px;
+}
+
+
+
+/* ========================================== */
+/* SCROLLBAR STYLING  */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #80e38f;
+  border-radius: 9px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(89, 234, 111);
+}
+
+
+/* ============================================================= */
+/* TOGGLE MENU STYLING */
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -86px;
+  left: 5vw;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span {
+  background: var(--logo);
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: var(--bg);
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+  color: var(--bg);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+  color: var(--bg);
+}
+
+#menu {
+  position: absolute;
+  width: 240px;
+  height: calc(100vh - 170px);
+  box-shadow: 0 0 10px #85888C;
+  margin: -50px 0 0 -10vw;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: var(--invert);
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menuToggle .username1 {
+  color: var(--bg);
+  border-bottom: 1px solid var(--bg);
+  padding: 1px 12px;
+}
+
+#menuToggle input:checked~ul {
+  transform: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: var(--bg);
+}
+
+#menuToggle h3 {
+  color: var(--bg);
+}
+
+/* =============================================================================================== */
+@media only screen and (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .create {
+    width: 300px;
+  }
+
+  .tasks {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  header .container {
+    display: none;
+  }
+
+  header .right {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  #menuToggle {
+    display: none;
+  }
+}
